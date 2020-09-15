@@ -1,0 +1,9 @@
+libs =
+#import libs += libhello%lib{hello}
+
+#exe{co_throw}: {hxx ixx txx cxx}{**} $libs testscript
+exe{hello}: cxx{main} {mxx}{greetings}
+
+mxx{greetings}@./: cxx.module_name = greetings
+
+cxx.poptions =+ "-I$out_root" "-I$src_root"

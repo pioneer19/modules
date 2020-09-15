@@ -1,0 +1,7 @@
+project = co_throw
+
+using version
+using config
+using test
+using install
+using dist

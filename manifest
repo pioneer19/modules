@@ -1,0 +1,11 @@
+: 1
+name: co_throw
+version: 0.1.0-a.0.z
+summary: co_throw C++ executable
+license: Apache-2.0
+description-file: README.md
+url: https://example.org/co_throw
+email: pioneer19@post.cz
+depends: * build2 >= 0.13.0
+depends: * bpkg >= 0.13.0
+#depends: libhello ^1.0.0

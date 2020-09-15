@@ -1,0 +1,27 @@
+#cxx.std = latest
+cxx.std = experimental
+
+using cxx
+
+cxx.features.modules=true
+
+assert $cxx.features.modules 'compiler does not support modules'
+
+hxx{*}: extension = hpp
+ixx{*}: extension = ipp
+txx{*}: extension = tpp
+cxx{*}: extension = cpp
+#mxx{*}: extension = mpp
+mxx{*}: extension = cppm
+
+# The test target for cross-testing (running tests under Wine, etc).
+#
+test.target = $cxx.target
+#cxx.std = experimental
+
+#using cxx
+
+#assert $cxx.features.modules 'compiler does not support modules'
+
+#mxx{*}: extension = mxx
+#cxx{*}: extension = cxx
